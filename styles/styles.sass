@@ -1,0 +1,332 @@
+@import ./variables
+@import ./menu
+
+*
+    margin: 0
+    padding: 0
+
+html
+    box-sizing: border-box
+
+.container
+    width: 100%
+
+.main
+    @include width-body()
+    @media (min-width: $desktop)
+        margin-left: 200px
+        margin-right: 200px
+h1
+    font-family: $fontsans
+    color: $colorblack
+    font-size: 36px
+    letter-spacing: 0px
+    margin-top: 29px
+    line-height: 42px
+    width: 242px
+
+    @media (min-width: $desktop)
+        font-size: 64px
+        font-weight: lighter
+        letter-spacing: 0
+        width: 100%
+
+#world
+    text-decoration: line-through
+
+#point
+    color: $colorblue
+
+.intro
+    margin-top: 1em
+    font-family: $fontmono
+    font-size: 14px
+    color: $colorblack
+    letter-spacing: 0
+    line-height: 22px
+    @media (min-width: $tablet)
+        margin-right: 412px
+        font-size: 16px
+        line-height: 24px
+    @media (min-width: $desktop)
+        width: 628px
+        margin-right: 412px
+        font-size: 16px
+        line-height: 24px
+
+.button
+    margin-top: 36px
+    height: 48px
+    background: #00f3bb
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    a
+        text-decoration: none
+
+    p
+        margin: 0
+        font-family: $fontmono
+        font-size: 1em
+        color: $colorblack
+        letter-spacing: 0
+        line-height: 22px
+    &:hover
+        background: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%)
+    @media (min-width: $tablet)
+        margin-top: 56px
+        height: 56px
+        width: 226px
+    @media (min-width: $desktop)
+        margin-top: 56px
+        height: 56px
+        width: 226px
+        font-size: 18px
+        line-height: 24px
+
+.contenido
+    margin-top: 24px
+    margin: 0
+    width: 100vw
+
+.polygon
+    margin-top: 24px
+    position: relative
+    clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%)
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%)
+    height: 1251px
+    @media (min-width: $tablet)
+        margin-top: 5px
+        width: 100vw
+        clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%)
+        height: 750.6px
+    @media (min-width: $desktop)
+        clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%)
+        height: 1042.6px
+
+.episodios
+    margin-top: 64px
+    position: absolute
+    width: 100vw
+    h2
+        @include title-white()
+    @media (min-width: $desktop)
+        margin-top: 186px
+        h2
+            font-size: 48px
+            margin-left: 200px
+
+.pods
+    margin-top: 21px
+    padding-bottom: 47px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    @include width-pods()
+    iframe
+        @include iframes()
+    @media (min-width: $tablet)
+        display: flex
+        justify-content: space-between
+        flex-direction: row
+        align-items: center
+        align-content: center
+        flex-wrap: wrap
+        iframe 
+            width: 360px
+    @media (min-width: $desktop)
+        margin-top: 26px
+        display: flex
+        justify-content: space-around
+        iframe
+            width: 584px
+            padding-bottom: 72px
+
+.us
+    transform: translate(0,-94px)
+    @media (min-width: $tablet)
+        display: flex
+        align-items: center
+    @media (min-width: $desktop)
+        margin-left: 200px
+        transform: translate(0,-174px)
+        display: flex
+        align-items: center
+
+.celular
+    img
+        width: 100vw
+        @media (min-width: $tablet)
+            width: 360px
+        @media (min-width: $desktop)
+            width: 457.6px
+.where
+    @include width-body()
+    margin-top: 27px
+    h2
+        @include title-end()
+        margin: 0
+    p
+        margin-top: 8px
+        font-family: $fontmono
+        font-size: 14px
+        color: #060A24
+        letter-spacing: 0
+        line-height: 22px
+
+    @media (min-width: $tablet)
+        width: 60%
+        margin-top: 20.4px
+        h2
+            margin: 0
+            font-size: 48px
+            color: #060A24
+            letter-spacing: 0
+        p
+            margin-top: 24px
+            font-size: 16px
+            letter-spacing: 0
+            line-height: 24px
+    @media (min-width: $desktop)
+        width: 464px
+        margin-top: 20.4px
+        h2
+            margin: 0
+            font-size: 48px
+            color: #060A24
+            letter-spacing: 0
+        p
+            margin-top: 24px
+            font-size: 16px
+            letter-spacing: 0
+            line-height: 24px
+
+.invitadas
+    transform: translate(0,-59px)
+    position: relative
+    h2
+        @include width-body()
+        @include title-end()
+        margin-top: 47px
+        margin-bottom: 14px
+    @media (min-width: $desktop)
+        margin-top: -123px
+        position: relative
+        h2
+            margin: 64px 200px 0 200px
+            font-size: 48px
+            letter-spacing: 0
+
+.fotos
+    display: flex
+    justify-content: center
+    align-content: center
+    flex-direction: column
+    img
+        width: 100%
+        display: block
+    @media (min-width: $desktop)
+        width: 100%
+        margin-top: 36px
+        display: flex
+        align-items: center
+        flex-direction: row
+        flex-wrap: wrap
+        margin-bottom: 0
+        img
+            width: 480px
+            height: 364px
+
+.themes
+    width: 100vw
+    h2
+        @include width-body()
+        @include title-end()
+    @media (min-width: $desktop)
+        h2
+            margin-left: 200px
+            font-size: 48px
+            letter-spacing: 0
+.icons
+    margin-top: 37px
+    @mixin icons()
+    .icon
+        text-align: center
+        margin: auto
+        h3
+            @include base-icon()
+            margin-top: 13px
+    @media (min-width: $desktop)
+        margin-top: 69px
+        margin-left: 200px
+        margin-right: 200px
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        .icon
+            width: 200px
+
+.polygon-2
+    margin-top: 42px
+    position: relative
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%)
+    height: 341px
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%)
+    @media (min-width: $desktop)
+        clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)
+        height: 518px
+.final
+    @include width-body() // Body width
+    padding-top: 64px
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    h2
+        @include title-white()
+        text-align: center
+        margin: 0
+    @media (min-width: $desktop)
+        padding-top: 213px
+        h2
+            font-size: 48px
+        .button
+            width: 345px
+            height: 56px
+
+.footer
+    @media (min-width: $desktop)
+        @include desktop()
+        display: flex
+        justify-content: space-between
+        align-items: center
+.rights
+    font-family: $fontmono
+    font-size: 14px
+    color: #060A24
+    letter-spacing: 0
+    line-height: 22px
+    text-align: center
+    margin-top: 24px
+    @media (min-width: $desktop)
+        font-size: 16px
+        letter-spacing: 0
+        line-height: 28px
+        margin-top: 0
+.media
+    display: flex
+    justify-content: center
+
+.fab
+    font-size: 1em
+    color: #060A24
+    margin: 1em 1.2em
+    text-align: center
+    @media (min-width: $desktop)
+        font-size: 18px
+        letter-spacing: 0
+        line-height: 28px

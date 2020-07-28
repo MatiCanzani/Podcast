@@ -1,0 +1,63 @@
+$fontsans: 'IBM Plex Sans', sans-serif
+$fontmono: 'IBM Plex Mono', monospace
+
+$colorblack: #060a24
+$colorwhite: #fff
+$colorblue: #0000ec
+$desktop: 1440px 
+$tablet: 768px       
+
+@mixin width-body() // Body width
+    margin-left: 16px
+    margin-right: 16px
+
+@mixin desktop()
+    margin-left: 100px
+    margin-right: 100px
+
+@mixin width-pods() 
+    margin-left: 11px
+    margin-right: 11px
+
+@mixin title-end()
+    font-family: $fontsans
+    font-weight: lighter
+    font-size: 36px
+    color: $colorblack
+    letter-spacing: 0
+    line-height: 42px
+
+@mixin base-icon()
+    font-family: $fontsans
+    font-weight: 600
+    font-size: 24px
+    color: #060A24
+    letter-spacing: 0
+    text-align: center
+
+@mixin icons()
+    width: 100%
+    margin-top: 24px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: column
+    align-content: center
+    flex-wrap: nowrap
+    img
+        margin: 13px auto
+
+@mixin title-white()
+    color: $colorwhite
+    font-size: 36px
+    letter-spacing: 0
+    line-height: 42px
+    font-family: $fontsans
+    font-weight: lighter
+    margin-left: 16px
+
+@mixin iframes()
+    height: 232px
+    border: 0
+    padding-bottom: 11px
+    width: 100%

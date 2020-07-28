@@ -1,0 +1,130 @@
+.contenido-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 16px;
+  margin-right: 16px;
+  height: 44px; }
+  @media (min-width: 1440px) {
+    .contenido-header {
+      margin-left: 100px;
+      margin-right: 100px;
+      height: 80px; } }
+
+.logo img {
+  display: block;
+  width: 24px;
+  height: 24px; }
+  @media (min-width: 1440px) {
+    .logo img {
+      width: 36px;
+      height: 36px; } }
+
+@media screen and (max-width: 1439px) {
+  .burger {
+    display: block;
+    width: 24px;
+    height: 24px; }
+
+  input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
+
+  input + label {
+    cursor: pointer;
+    width: 18px;
+    height: 12px;
+    z-index: 5; }
+    input + label span {
+      position: absolute;
+      width: 18px;
+      height: 2px;
+      top: 50%;
+      display: block;
+      background: #060a24;
+      transition: 0.5s; }
+      input + label span:first-child {
+        top: 36.5%; }
+      input + label span:last-child {
+        top: 62.5%; }
+
+  input:checked + label span {
+    opacity: 1;
+    transform: rotate(45deg);
+    top: 50%; }
+    input:checked + label span:first-child {
+      opacity: 1;
+      transform: rotate(-45deg); }
+    input:checked + label span:last-child {
+      opacity: 0; }
+
+  input ~ nav {
+    background: #0000ec;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 44px;
+    height: 244px;
+    z-index: 3;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    display: none; }
+    input ~ nav > ul {
+      height: 100%;
+      text-align: left;
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      list-style: none;
+      margin-left: 16px;
+      margin-right: 16px; }
+      input ~ nav > ul > li {
+        opacity: 0;
+        transition: 0.5s;
+        transition-delay: 0s; }
+        input ~ nav > ul > li:first-child {
+          margin-top: 16px; }
+        input ~ nav > ul > li > a {
+          text-decoration: none;
+          color: #fff;
+          font-family: "IBM Plex Mono";
+          font-size: 16px;
+          letter-spacing: 0;
+          display: block;
+          margin-bottom: 24px; }
+
+  input:checked ~ nav {
+    transition-delay: 0s;
+    display: block; }
+    input:checked ~ nav > ul > li {
+      opacity: 1;
+      transition-delay: 0.5s; } }
+@media (min-width: 1440px) {
+  nav > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; }
+    nav > ul > li {
+      margin-left: 48px; }
+      nav > ul > li > a {
+        font-family: "IBM Plex Mono", monospace;
+        text-decoration: none;
+        font-size: 16px;
+        color: #060a24;
+        letter-spacing: 0;
+        line-height: 28px; }
+        nav > ul > li > a:hover {
+          color: #00F3BB;
+          text-decoration: line-through; }
+        nav > ul > li > a:active {
+          color: rgba(6, 10, 36, 0.56);
+          text-decoration: line-through; } }
+input[type=checkbox] {
+  display: none; }
+
+/*# sourceMappingURL=menu.css.map */
